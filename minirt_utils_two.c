@@ -6,7 +6,7 @@
 /*   By: migalvar <migalvar@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/05/19 20:28:10 by migalvar      #+#    #+#                 */
-/*   Updated: 2020/05/22 20:46:31 by migalvar      ########   odam.nl         */
+/*   Updated: 2020/05/23 12:51:59 by migalvar      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ double		ft_simple_ftoi(char *s, int *j, double n)
 
 	count = 0;
 	n = ft_simple_atoi(s, j, n);
-	*j = *j + 1;
-	if (n < 0)
+	*j = ft_skip_c(s, *j, '.');
+	if (n < 0 && s[(*j) - 1] == '.')
 	{
 		while (s[*j] >= 48 && s[*j] <= 57)
 		{
@@ -28,7 +28,7 @@ double		ft_simple_ftoi(char *s, int *j, double n)
 			*j = *j + 1;
 		}
 	}
-	else
+	else if (s[*(j) - 1] == '.')
 	{
 		while (s[*j] >= 48 && s[*j] <= 57)
 		{
@@ -37,6 +37,7 @@ double		ft_simple_ftoi(char *s, int *j, double n)
 			*j = *j + 1;
 		}
 	}
+	*j = ft_skip_c(s, *j, ',');
 	return (n);
 }
 

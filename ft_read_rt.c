@@ -17,9 +17,7 @@ int			ft_read_rt(t_env *env, t_shape *obj, int fd)
 	char	*content;
 	char	**lines;
 	int		c;
-	int		i;//TO REMOVE
 
-	i = 0;//TO REMOVE
 	content = ft_content(fd, 1);//WORKS
 	c = ft_check_and_count(content, 0, 0);//WORKS
 	if (c == -1)
@@ -34,11 +32,6 @@ int			ft_read_rt(t_env *env, t_shape *obj, int fd)
 		return (-1);
 	}
 	ft_cut(lines, content);
-	while (lines[i] != NULL)//TO REMOVE
-	{
-		printf("Line %i: %s\n", (i + 1), lines[i]);//TO REMOVE
-		i++;//TO REMOVE
-	}
 	obj = ft_info(lines, obj, env, c);
 	ft_free(lines);
 	return (c);

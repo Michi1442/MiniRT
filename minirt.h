@@ -48,46 +48,7 @@ typedef struct		s_shape
 	struct s_shape	*next;
 }					t_shape;
 
-
-/*typedef struct		s_sp//Sphere settings
-{
-	double			sp_loc[3];
-	double			sp_diam;
-	int				sp_rgb[3];
-}					t_sp;
-
-typedef struct		s_pl//Plane settings
-{
-	double			pl_loc[3];
-	double			pl_vect[3];
-	int				pl_rgb[3];
-}					t_pl;
-
-typedef struct		s_sq//Square settings
-{
-	double			sq_loc[3];
-	double			sq_vect[3];
-	double			side;
-	int				sq_rgb[3];
-}					t_sq;
-
-typedef struct		s_cy//Cylinder settings
-{
-	double			cy_loc[3];
-	double			cy_vect[3];
-	double			cy_diam;
-	double			cy_height;
-	int				cy_rgb[3];
-}					t_cy;
-
-typedef struct		s_tr//Triangle settings
-{
-	double			tr_loc_one[3];
-	double			tr_loc_two[3];
-	double			tr_loc_three[3];
-	int				tr_rgb[3];
-}					t_tr;*/
-
+int					ft_parse_loc(t_shape *obj, char *lines, int i);
 void				ft_parse_obj(char *lines, t_shape *obj);
 
 double				ft_simple_ftoi(char *s, int *j, double n);

@@ -8,17 +8,17 @@ void			print_structs(t_env *env, t_shape *obj)//TO REMOVE!!
 	while (obj->next != NULL)
 	{
 		if (obj->type[0] == 'c' && obj->type[1] != 'y')
-			printf("Camera location: %f, %f, %f			Vector: %f, %f, %f			FOV: %i\n",
+			printf("Camera location: %f, %f, %f		Vector: %f, %f, %f			FOV: %i\n",
 					obj->loc_cero[0], obj->loc_cero[1], obj->loc_cero[2],
 					obj->vector[0], obj->vector[1], obj->vector[2], obj->color[0]);
 		if (obj->type[0] == 'c' && obj->type[1] == 'y')
-			printf("Cilinder location: %f, %f, %f			Vector: %f, %f, %f			Diameter: %f		Side: %f		Color: %i, %i, %i\n",
+			printf("Cylinder location: %f, %f, %f		Vector: %f, %f, %f			Diameter: %f		Side: %f			Color: %i, %i, %i\n",
 					obj->loc_cero[0], obj->loc_cero[1], obj->loc_cero[2],
 					obj->vector[0], obj->vector[1], obj->vector[2], 
 					obj->diam, obj->side, 
 					obj->color[0], obj->color[1], obj->color[2]);
 		if (obj->type[0] == 'l')
-			printf("Light location: %f, %f, %f			Color: %i, %i, %i\n",
+			printf("Light location: %f, %f, %f		Color: %i, %i, %i\n",
 					obj->loc_cero[0], obj->loc_cero[1], obj->loc_cero[2],
 					obj->color[0], obj->color[1], obj->color[2]);
 		if (obj->type[0] == 'p')
@@ -32,7 +32,7 @@ void			print_structs(t_env *env, t_shape *obj)//TO REMOVE!!
 					obj->diam, 
 					obj->color[0], obj->color[1], obj->color[2]);
 		if (obj->type[0] == 's' && obj->type[1] == 'q')
-			printf("Cube location: %f, %f, %f			Vector: %f, %f, %f			Side: %f			Color: %i, %i, %i\n",
+			printf("Square location: %f, %f, %f		Vector: %f, %f, %f			Side: %f			Color: %i, %i, %i\n",
 					obj->loc_cero[0], obj->loc_cero[1], obj->loc_cero[2],
 					obj->vector[0], obj->vector[1], obj->vector[2], 
 					obj->side, 
